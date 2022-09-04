@@ -19,11 +19,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0xC2AB
-#define PRODUCT_ID      0x3939
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    tapioki
-#define PRODUCT         Architeuthis dux
+#define VENDOR_ID 0xC2AB
+#define PRODUCT_ID 0x3939
+#define DEVICE_VER 0x0001
+#define MANUFACTURER tapioki
+#define PRODUCT Architeuthis dux
 
 /* key matrix size */
 #define MATRIX_ROWS 8
@@ -39,22 +39,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *                  NO_DIODE = switches are directly connected to AVR pins
  *
-*/
-#define DIRECT_PINS { \
-    { C6, D2, F7, B2, F4 }, \
-    { D7, D0, F6, B3, F5 }, \
-    { E6, D4, D3, B1, B6 }, \
-    { B4, B5, NO_PIN, NO_PIN, NO_PIN } \
-}
+ */
+#define DIRECT_PINS                                                         \
+    {                                                                       \
+        {C6, D2, F7, B2, F4}, {D7, D0, F6, B3, F5}, {E6, D4, D3, B1, B6}, { \
+            B4, B5, NO_PIN, NO_PIN, NO_PIN                                  \
+        }                                                                   \
+    }
 
-#define DIRECT_PINS_RIGHT { \
-    { F4, B2, F7, D2, C6 }, \
-    { F5, B3, F6, D0, D7 }, \
-    { B6, B1, D3, D4, E6 }, \
-    { B5, B4, NO_PIN, NO_PIN, NO_PIN } \
-}
-
-
+#define DIRECT_PINS_RIGHT                                                   \
+    {                                                                       \
+        {F4, B2, F7, D2, C6}, {F5, B3, F6, D0, D7}, {B6, B1, D3, D4, E6}, { \
+            B5, B4, NO_PIN, NO_PIN, NO_PIN                                  \
+        }                                                                   \
+    }
 
 #define UNUSED_PINS
 
@@ -81,3 +79,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Top right key on right half */
 #define BOOTMAGIC_LITE_ROW_RIGHT 4
 #define BOOTMAGIC_LITE_COLUMN_RIGHT 4
+/* HRM shtuff */
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_TERM 185
