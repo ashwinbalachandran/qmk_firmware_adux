@@ -64,7 +64,7 @@ bool is_oneshot_ignored_key(uint16_t keycode) {
     }
 }
 
-bool sw_win_active = false;
+bool sw_win_active  = false;
 bool sw_lang_active = false;
 
 oneshot_state os_shft_state = os_up_unqueued;
