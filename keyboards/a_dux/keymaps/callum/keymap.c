@@ -33,10 +33,10 @@ enum keycodes {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [DEF] = LAYOUT_callum(KC_Q, KC_W, KC_F, KC_P, KC_B, KC_J, KC_L, KC_U, KC_Y, KC_SCLN, KC_A, KC_R, KC_S, KC_T, KC_G, KC_M, KC_N, KC_E, KC_I, KC_O, KC_Z, KC_X, KC_C, KC_D, KC_V, KC_K, KC_H, KC_COMM, KC_DOT, KC_SLSH, LA_NAV, KC_LSFT, KC_SPC, LA_SYM),
-    [SYM] = LAYOUT_callum(KC_ESC, KC_LBRC, KC_LCBR, KC_LPRN, KC_TILD, KC_CIRC, KC_RPRN, KC_RCBR, KC_RBRC, KC_GRV, KC_MINS, KC_ASTR, KC_EQL, KC_UNDS, KC_DLR, KC_HASH, OS_CMD, OS_SHIFT, OS_ALT, OS_CTRL, KC_PLUS, KC_PIPE, KC_AT, KC_BSLS, KC_PERC, XXXXXXX, KC_AMPR, KC_QUOT, KC_COLN, KC_EXLM, _______, _______, _______, _______),
-    [NAV] = LAYOUT_callum(KC_TAB, SW_WIN, TABL, TABR, KC_VOLU, RESET, HOME, KC_UP, END, KC_BSPC, OS_CTRL, OS_ALT, OS_SHFT, OS_CMD, KC_VOLD, KC_CAPS, KC_LEFT, KC_DOWN, KC_RGHT, KC_DEL, SPCL, SPC_R, BACK, FWD, KC_MPLY, KC_SCRL, KC_PGUP, KC_PGDN, KC_APP, KC_ENT, _______, _______, _______, _______),
-    [NUM] = LAYOUT_callum(KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, OS_SHFT, OS_CTRL, OS_ALT, OS_CMD, KC_F11, KC_F12, OS_CMD, OS_SHIFT, OS_ALT, OS_CTRL, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, _______, _______, _______, _______),
+    [DEF] = LAYOUT(KC_Q, KC_W, KC_F, KC_P, KC_B, KC_J, KC_L, KC_U, KC_Y, KC_SCLN, KC_A, KC_R, KC_S, KC_T, KC_G, KC_M, KC_N, KC_E, KC_I, KC_O, KC_Z, KC_X, KC_C, KC_D, KC_V, KC_K, KC_H, KC_COMM, KC_DOT, KC_SLSH, LA_NAV, KC_LSFT, KC_SPC, LA_SYM),
+    [SYM] = LAYOUT(KC_ESC, KC_LBRC, KC_LCBR, KC_LPRN, KC_TILD, KC_CIRC, KC_RPRN, KC_RCBR, KC_RBRC, KC_GRV, KC_MINS, KC_ASTR, KC_EQL, KC_UNDS, KC_DLR, KC_HASH, OS_CMD, OS_SHFT, OS_ALT, OS_CTRL, KC_PLUS, KC_PIPE, KC_AT, KC_BSLS, KC_PERC, XXXXXXX, KC_AMPR, KC_QUOT, KC_COLN, KC_EXLM, _______, _______, _______, _______),
+    [NAV] = LAYOUT(KC_TAB, KC_WH_D, KC_MPLY, KC_MNXT, KC_VOLU, KC_PSCR, KC_HOME, KC_UP, KC_END, KC_BSPC, OS_CTRL, OS_ALT, OS_SHFT, OS_CMD, KC_MUTE, KC_CAPS, KC_LEFT, KC_DOWN, KC_RGHT, KC_DEL, LCAG(KC_V), KC_WH_U, KC_MSTP, KC_MPRV, KC_VOLD, KC_SCRL, KC_PGUP, KC_PGDN, KC_APP, KC_ENT, _______, _______, _______, _______),
+    [NUM] = LAYOUT(KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, OS_CTRL, OS_ALT, OS_SHFT, OS_CMD, KC_F11, KC_F12, OS_CMD, OS_SHFT, OS_ALT, OS_CTRL, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, _______, _______, _______, _______),
 };
 
 bool is_oneshot_cancel_key(uint16_t keycode) {
@@ -64,7 +64,7 @@ bool is_oneshot_ignored_key(uint16_t keycode) {
     }
 }
 
-bool sw_win_active = false;
+bool sw_win_active  = false;
 bool sw_lang_active = false;
 
 oneshot_state os_shft_state = os_up_unqueued;
